@@ -10,6 +10,7 @@
 	--footer-links: rgba(255, 255, 255, 0.6);
 	--filter-bg: #f5f4fa;
 	--card-set-gap: 30px;
+	--icon-color: #AFB1B8;
 }
 /* global rules */
 body {
@@ -124,18 +125,28 @@ img {
 	/* outline: 1px solid greenyellow; */
 }
 
-
 .current {
 	color: var(--accent-color);
 }
 .nav-link:hover,
 .nav-link:focus {
+	fill: var(--accent-color);
 	color: var(--accent-color);
 }
 
 .contact-link {
+	display: flex;
+	align-items: center;
 	color: var(--main-color);
 }
+
+.contact-icon {
+	fill: currentColor;
+	margin-right: 10px;
+}
+
+
+
 /* hero */
 .hero-sect {
 	padding: 200px 0;
@@ -147,7 +158,8 @@ img {
 	max-width: 1600px;
 	margin-left: auto;
 	margin-right: auto;
-	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+	rgba(47, 48, 58, 0.4)),
 	url(../images/hero-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -197,10 +209,17 @@ img {
 .section-qual {
 	padding-top: 94px;
 }
-.qualities {
-	padding-top: 94px;
-	/* outline: 1px solid greenyellow; */
+
+.qualities-thumb {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--filter-bg);
+	width: 270px;
+	height: 120px;
+	margin-bottom: 30px;
 }
+
 .quality-header {
 	margin-bottom: 10px;
 	font-size: 14px;
@@ -268,8 +287,6 @@ display: flex;
 	background-color:var(--main-background-color);
 }
 
-
-
 .names {
 	margin-bottom: 10px;
 	font-weight: 500;
@@ -284,6 +301,36 @@ display: flex;
 	line-height: 1.19;
 	text-align: center;
 }
+
+.social-list {
+	display: flex;
+	justify-content: center;
+	margin-top: 16px;
+	/* outline: 1px solid red; */
+}
+
+.social-item:not(:first-child) {
+	margin-left: 10px;
+
+}
+
+.social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	fill: var(--icon-color);
+	border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+	background-color: var(--accent-color);
+	fill: var(--secondary-color);
+}
+
+
 /* Footer */
 .footer {
 	padding: 60px 0;
@@ -345,9 +392,19 @@ display: flex;
 	color: var(--secondary-color);
 	background-color: var(--accent-color);
 }
+
+.filter-list {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 16px;
+	margin-bottom: 34px;
+	/* outline: 1px dashed red; */
+}
+
 .filter-item:not(:first-child) {
 	margin-left: 8px;
 }
+
 /* cards */
 .cards-header {
 	margin-bottom: 4px;
@@ -367,13 +424,7 @@ display: flex;
 	line-height: 1.88;
 }
 
-.filter-list {
-	display: flex;
-	justify-content: center;
-	padding-bottom: 16px;
-	margin-bottom: 34px;
-	/* outline: 1px dashed red; */
-}
+
 .cards-list {
 	display: flex;
 	flex-wrap: wrap;

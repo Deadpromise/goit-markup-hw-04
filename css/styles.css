@@ -363,6 +363,11 @@ display: flex;
 	padding: 60px 0;
 	background-color: var(--secondary-background-color);
 }
+.footer-cont {
+	display: flex;
+	align-items: baseline;
+}
+
 
 .logo-bot {
 	display: block;
@@ -390,6 +395,20 @@ display: flex;
 
 .foot-item + .foot-item {
 	margin-top: 9px;
+}
+.social-cont {
+	margin-left: 70px;
+}
+
+.social-call {
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--secondary-color);
+} 
+
+.footer-social {
+	background-color: rgba(255, 255, 255, 0.1);
+	fill: var(--secondary-color);
 }
 
 /* Portfolio */
